@@ -20,6 +20,12 @@ Description: This Template is created for Youtubers
   background-repeat: no-repeat;
   z-index: -1;
 }
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
 #p {
   
   
