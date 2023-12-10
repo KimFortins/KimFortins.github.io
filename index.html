@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">   
+    <title>My Website</title>
+
+    <style>
+       
+      #navigation {
+    margin: 20px 0;
+    display: flex; /* Makes the links stack horizontally */
+    justify-content: center; /* Centers the link buttons */
+    gap: 20px; /* Useful to separate link buttons evenly */
+}
+
+#navigation a {
+    display: inline-block; /* or you can leave it as 'block' */
+    text-decoration: none;
+    padding: 40px; 
+    max-width: 150px;
+    font-size: 2rem;  
+    border: 10px solid #fff8f8;
+    background-color: transparent;
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+#navigation a:hover {
+    color: rgb(242, 245, 247);
+    background: #867a7a;
+    box-shadow: 0 0 10px rgba(255, 2, 2, 0.2);
+}
+
+    </style>
+</head>
+<body>  
+<div id="content" class="fade-in-text">
+        <h1>HI MY NAME IS KIM</h1>
+        <p>WELCOME TO MY WEBSITE</p>
+    </div>
+    <div class="header-content">
+        <nav id="navigation" role="navigation" aria-label="Main navigation">
+          
+          <a href="about (2).html" id="aboutMeLink">About me</a>
+       
+        </nav>
+    </div>
+    
+
+   <div class="live-img">
+    <img id="live-img" src="C:\kim filess\image\giphy.gif" alt="Live Picture Description">
+   </div>
+    
+    
+    <header></header>
+    
+
+<h2>Created By:Kim Fortin</h2>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var fadeText = document.querySelector('.fade-in-text');
+            fadeText.style.opacity = 0;
+            var fadeIn = function () {
+                var fadeInEffect = setInterval(function () {
+                    if (fadeText.style.opacity < 1) {
+                        fadeText.style.opacity = parseFloat(fadeText.style.opacity) + 0.01;
+                    } else {
+                        clearInterval(fadeInEffect);
+                    }
+                }, 10);
+            };
+            fadeIn();
+        });
+    </script>
+    
+</body>
+
+</html>
